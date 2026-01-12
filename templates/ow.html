@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium portfolio showcasing exceptional digital experiences and award-winning web projects">
+    <title>Our Work - WebVibe Studios</title>
+    
+    <!-- Stylesheets -->
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="/static/css/nav.css"/>
+    <link rel="stylesheet" href="/static/css/ow.css">
+    <link
+    rel="icon"
+    type="image/png"
+    href="{{ url_for('static', filename='images/logo.png') }}"
+    >    
+    <!-- Three.js for 3D animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- GSAP for premium animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <div class="top-left">
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+917861055101">+91 78610 55101</a>
+      </div>
+      <div class="top-right">
+        <a href="https://www.instagram.com/webvibe_studios_?igsh=MWZldXI1aHF5dG1xbw%3D%3D&utm_source=qr", target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/webvibe-studios-0aa9163a1/", target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=7861055101&text&type=phone_number&app_absent=0", target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+
+    <!-- NAVBAR -->
+    <header class="navbar" role="navigation">
+      <!-- LEFT GROUP -->
+      <div class="nav-left">
+        <!-- HAMBURGER -->
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- LOGO + NAME -->
+        <div class="branding">
+          <img src="/static/images/logo.png" alt="Company Logo" />
+          <span class="brand-name">WebVibe Studios</span>
+        </div>
+      </div>
+
+      <!-- CENTER MENU -->
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="{{ url_for('index') }}" tabindex="0">Home</a>
+        <a href="{{ url_for('services') }}" tabindex="0">Services</a>
+        <a href="{{ url_for('ow') }}" tabindex="0">Project</a>
+        <a href="{{ url_for('about') }}" tabindex="0">About Us</a>
+        <a href="{{ url_for('contact') }}" tabindex="0">Connect</a>
+      </nav>
+    </header>
+    <!-- 3D Canvas Background -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-content">
+            <div class="hero-label">Our Portfolio</div>
+            <h1 class="hero-title">
+                <span class="hero-line">Crafting Digital</span>
+                <span class="hero-line">Masterpieces</span>
+            </h1>
+            <p class="hero-subtitle">Where innovation meets excellence in every pixel</p>
+        </div>
+    </section>
+
+    <!-- Featured Work Section -->
+    <section class="work-section" id="work">
+        <div class="container">
+            
+            <!-- Project 1: WebVibe Studio -->
+            <article class="project-card" data-project="1">
+                <div class="project-visual">
+                    <div class="project-image-wrapper">
+                        <img src="/static/images/wV.png" alt="WebVibe Studio - Modern Creative Agency Website" class="project-image">
+                        <div class="image-overlay">
+                            <span class="view-project-hover">View Project</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-number">01</div>
+                    <h2 class="project-title">WebVibe Studio</h2>
+                    <p class="project-description">A cutting-edge digital studio platform showcasing modern web design principles with immersive user experiences and dynamic interactions.</p>
+                    <div class="project-tags">
+                        <span class="tag">Web Design</span>
+                        <span class="tag">UI/UX</span>
+                        <span class="tag">Interactive</span>
+                    </div>
+                    <a href="https://webvibestudios-gzc8.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <span>View Project</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Project 2: Parampara Weddings -->
+            <article class="project-card project-card-reverse" data-project="2">
+                <div class="project-visual">
+                    <div class="project-image-wrapper">
+                        <img src="/static/images/parampara.png" alt="Parampara Weddings - Elegant Wedding Planning Platform" class="project-image">
+                        <div class="image-overlay">
+                            <span class="view-project-hover">View Project</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-number">02</div>
+                    <h2 class="project-title">Parampara Weddings</h2>
+                    <p class="project-description">An elegant wedding planning platform featuring sophisticated design, seamless booking flows, and memorable visual storytelling.</p>
+                    <div class="project-tags">
+                        <span class="tag">Luxury</span>
+                        <span class="tag">Events</span>
+                        <span class="tag">Booking</span>
+                    </div>
+                    <a href="https://weddingweb-2.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <span>View Project</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Project 3: Dipesh Industries -->
+            <article class="project-card" data-project="3">
+                <div class="project-visual">
+                    <div class="project-image-wrapper">
+                        <img src="/static/images/di.jpeg" alt="Dipesh Industries - Industrial Manufacturing Website" class="project-image">
+                        <div class="image-overlay">
+                            <span class="view-project-hover">View Project</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-number">03</div>
+                    <h2 class="project-title">Dipesh Industries</h2>
+                    <p class="project-description">A robust industrial showcase for brick machinery manufacturers, combining technical precision with modern web architecture.</p>
+                    <div class="project-tags">
+                        <span class="tag">Industrial</span>
+                        <span class="tag">B2B</span>
+                        <span class="tag">Manufacturing</span>
+                    </div>
+                    <a href="https://dipeshindustries.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <span>View Project</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Project 4: NutriStudent -->
+            <article class="project-card project-card-reverse" data-project="4">
+                <div class="project-visual">
+                    <div class="project-image-wrapper">
+                        <img src="/static/images/ns.jpeg" alt="NutriStudent - Health Food Delivery Platform" class="project-image">
+                        <div class="image-overlay">
+                            <span class="view-project-hover">View Project</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-number">04</div>
+                    <h2 class="project-title">NutriStudent</h2>
+                    <p class="project-description">A health-focused platform delivering nutritional excellence to students, featuring intuitive ordering and meal planning systems.</p>
+                    <div class="project-tags">
+                        <span class="tag">Health</span>
+                        <span class="tag">E-commerce</span>
+                        <span class="tag">USA</span>
+                    </div>
+                    <a href="https://nutristudent.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <span>View Project</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Statement / Craft Section -->
+    <section class="statement-section" id="statement">
+        <div class="container">
+            <div class="statement-content">
+                <div class="statement-label">Our Philosophy</div>
+                <h2 class="statement-title">
+                    We don't just build websites.<br>
+                    We craft digital experiences that inspire, engage, and transform.
+                </h2>
+                <p class="statement-text">
+                    Every project is a testament to our commitment to excellence, attention to detail, 
+                    and passion for innovation. We blend cutting-edge technology with timeless design 
+                    principles to create solutions that stand the test of time.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Delivery Section with Animated Flags -->
+    <section class="flags-section" id="flags">
+        <div class="container">
+            <div class="flags-content">
+                <div class="flags-label">Global Reach</div>
+                <h2 class="flags-title">Delivering Excellence Worldwide</h2>
+                <p class="flags-subtitle">From India to USA, we serve clients across continents</p>
+                
+                <div class="flags-container">
+                    <!-- India Flag -->
+                    <div class="flag-wrapper" data-country="india">
+                        <div class="flag-pole-container">
+                            <div class="flag-pole"></div>
+                            <div class="flag-pole-top"></div>
+                            <svg class="flag india-flag" viewBox="0 0 300 200" preserveAspectRatio="none">
+                                <!-- Saffron stripe -->
+                                <rect width="300" height="66.67" fill="#FF9933"/>
+                                
+                                <!-- White stripe -->
+                                <rect y="66.67" width="300" height="66.67" fill="#FFFFFF"/>
+                                
+                                <!-- Green stripe -->
+                                <rect y="133.33" width="300" height="66.67" fill="#138808"/>
+                                
+                                <!-- Ashoka Chakra -->
+                                <g transform="translate(150, 100)">
+                                    <!-- Outer circle -->
+                                    <circle r="25" fill="none" stroke="#000080" stroke-width="2"/>
+                                    
+                                    <!-- 24 spokes -->
+                                    <g class="chakra-spokes">
+                                        <line x1="0" y1="-25" x2="0" y2="-15" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="6.5" y1="-24" x2="4" y2="-14.5" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="12.5" y1="-21.7" x2="7.5" y2="-13" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="17.7" y1="-17.7" x2="10.6" y2="-10.6" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="21.7" y1="-12.5" x2="13" y2="-7.5" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="24" y1="-6.5" x2="14.5" y2="-4" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="25" y1="0" x2="15" y2="0" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="24" y1="6.5" x2="14.5" y2="4" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="21.7" y1="12.5" x2="13" y2="7.5" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="17.7" y1="17.7" x2="10.6" y2="10.6" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="12.5" y1="21.7" x2="7.5" y2="13" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="6.5" y1="24" x2="4" y2="14.5" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="0" y1="25" x2="0" y2="15" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="-6.5" y1="24" x2="-4" y2="14.5" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="-12.5" y1="21.7" x2="-7.5" y2="13" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="-17.7" y1="17.7" x2="-10.6" y2="10.6" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="-21.7" y1="12.5" x2="-13" y2="7.5" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="-24" y1="6.5" x2="-14.5" y2="4" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="-25" y1="0" x2="-15" y2="0" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="-24" y1="-6.5" x2="-14.5" y2="-4" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="-21.7" y1="-12.5" x2="-13" y2="-7.5" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="-17.7" y1="-17.7" x2="-10.6" y2="-10.6" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="-12.5" y1="-21.7" x2="-7.5" y2="-13" stroke="#000080" stroke-width="1.5"/>
+                                        <line x1="-6.5" y1="-24" x2="-4" y2="-14.5" stroke="#000080" stroke-width="1.5"/>
+                                    </g>
+                                    
+                                    <!-- Center circle -->
+                                    <circle r="3" fill="#000080"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="country-label">India</div>
+                    </div>
+                    <br><br>
+
+                    <!-- USA Flag -->
+                    <div class="flag-wrapper" data-country="usa">
+                        <div class="flag-pole-container">
+                            <div class="flag-pole"></div>
+                            <div class="flag-pole-top"></div>
+                            <svg class="flag usa-flag" viewBox="0 0 380 200" preserveAspectRatio="none">
+                                <!-- Red stripes -->
+                                <rect width="380" height="15.38" fill="#B22234"/>
+                                <rect y="30.77" width="380" height="15.38" fill="#B22234"/>
+                                <rect y="61.54" width="380" height="15.38" fill="#B22234"/>
+                                <rect y="92.31" width="380" height="15.38" fill="#B22234"/>
+                                <rect y="123.08" width="380" height="15.38" fill="#B22234"/>
+                                <rect y="153.85" width="380" height="15.38" fill="#B22234"/>
+                                <rect y="184.62" width="380" height="15.38" fill="#B22234"/>
+                                
+                                <!-- White stripes -->
+                                <rect y="15.38" width="380" height="15.38" fill="#FFFFFF"/>
+                                <rect y="46.15" width="380" height="15.38" fill="#FFFFFF"/>
+                                <rect y="76.92" width="380" height="15.38" fill="#FFFFFF"/>
+                                <rect y="107.69" width="380" height="15.38" fill="#FFFFFF"/>
+                                <rect y="138.46" width="380" height="15.38" fill="#FFFFFF"/>
+                                <rect y="169.23" width="380" height="15.38" fill="#FFFFFF"/>
+                                
+                                <!-- Blue canton -->
+                                <rect width="152" height="107.69" fill="#3C3B6E"/>
+                                
+                                <!-- Stars (50 stars in 9 rows, alternating 6 and 5) -->
+                                <g fill="#FFFFFF">
+                                    <!-- Row 1: 6 stars -->
+                                    <polygon points="15,10 17,16 23,16 18,20 20,26 15,22 10,26 12,20 7,16 13,16" class="star"/>
+                                    <polygon points="40,10 42,16 48,16 43,20 45,26 40,22 35,26 37,20 32,16 38,16" class="star"/>
+                                    <polygon points="65,10 67,16 73,16 68,20 70,26 65,22 60,26 62,20 57,16 63,16" class="star"/>
+                                    <polygon points="90,10 92,16 98,16 93,20 95,26 90,22 85,26 87,20 82,16 88,16" class="star"/>
+                                    <polygon points="115,10 117,16 123,16 118,20 120,26 115,22 110,26 112,20 107,16 113,16" class="star"/>
+                                    <polygon points="140,10 142,16 148,16 143,20 145,26 140,22 135,26 137,20 132,16 138,16" class="star"/>
+                                    
+                                    <!-- Row 2: 5 stars -->
+                                    <polygon points="27.5,25 29.5,31 35.5,31 30.5,35 32.5,41 27.5,37 22.5,41 24.5,35 19.5,31 25.5,31" class="star"/>
+                                    <polygon points="52.5,25 54.5,31 60.5,31 55.5,35 57.5,41 52.5,37 47.5,41 49.5,35 44.5,31 50.5,31" class="star"/>
+                                    <polygon points="77.5,25 79.5,31 85.5,31 80.5,35 82.5,41 77.5,37 72.5,41 74.5,35 69.5,31 75.5,31" class="star"/>
+                                    <polygon points="102.5,25 104.5,31 110.5,31 105.5,35 107.5,41 102.5,37 97.5,41 99.5,35 94.5,31 100.5,31" class="star"/>
+                                    <polygon points="127.5,25 129.5,31 135.5,31 130.5,35 132.5,41 127.5,37 122.5,41 124.5,35 119.5,31 125.5,31" class="star"/>
+                                    
+                                    <!-- Row 3: 6 stars -->
+                                    <polygon points="15,40 17,46 23,46 18,50 20,56 15,52 10,56 12,50 7,46 13,46" class="star"/>
+                                    <polygon points="40,40 42,46 48,46 43,50 45,56 40,52 35,56 37,50 32,46 38,46" class="star"/>
+                                    <polygon points="65,40 67,46 73,46 68,50 70,56 65,52 60,56 62,50 57,46 63,46" class="star"/>
+                                    <polygon points="90,40 92,46 98,46 93,50 95,56 90,52 85,56 87,50 82,46 88,46" class="star"/>
+                                    <polygon points="115,40 117,46 123,46 118,50 120,56 115,52 110,56 112,50 107,46 113,46" class="star"/>
+                                    <polygon points="140,40 142,46 148,46 143,50 145,56 140,52 135,56 137,50 132,46 138,46" class="star"/>
+                                    
+                                    <!-- Row 4: 5 stars -->
+                                    <polygon points="27.5,55 29.5,61 35.5,61 30.5,65 32.5,71 27.5,67 22.5,71 24.5,65 19.5,61 25.5,61" class="star"/>
+                                    <polygon points="52.5,55 54.5,61 60.5,61 55.5,65 57.5,71 52.5,67 47.5,71 49.5,65 44.5,61 50.5,61" class="star"/>
+                                    <polygon points="77.5,55 79.5,61 85.5,61 80.5,65 82.5,71 77.5,67 72.5,71 74.5,65 69.5,61 75.5,61" class="star"/>
+                                    <polygon points="102.5,55 104.5,61 110.5,61 105.5,65 107.5,71 102.5,67 97.5,71 99.5,65 94.5,61 100.5,61" class="star"/>
+                                    <polygon points="127.5,55 129.5,61 135.5,61 130.5,65 132.5,71 127.5,67 122.5,71 124.5,65 119.5,61 125.5,61" class="star"/>
+                                    
+                                    <!-- Row 5: 6 stars -->
+                                    <polygon points="15,70 17,76 23,76 18,80 20,86 15,82 10,86 12,80 7,76 13,76" class="star"/>
+                                    <polygon points="40,70 42,76 48,76 43,80 45,86 40,82 35,86 37,80 32,76 38,76" class="star"/>
+                                    <polygon points="65,70 67,76 73,76 68,80 70,86 65,82 60,86 62,80 57,76 63,76" class="star"/>
+                                    <polygon points="90,70 92,76 98,76 93,80 95,86 90,82 85,86 87,80 82,76 88,76" class="star"/>
+                                    <polygon points="115,70 117,76 123,76 118,80 120,86 115,82 110,86 112,80 107,76 113,76" class="star"/>
+                                    <polygon points="140,70 142,76 148,76 143,80 145,86 140,82 135,86 137,80 132,76 138,76" class="star"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="country-label">USA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Let's Build Something Exceptional</h2>
+                <p class="cta-subtitle">Ready to elevate your digital presence?</p>
+                <a href="{{ url_for('contact') }}" class="cta-button">
+                    <span class="cta-button-text">Start Your Project</span>
+                    <span class="cta-button-bg"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="elegant-footer">
+      <div class="footer-inner">
+        <!-- BRAND -->
+        <div class="footer-col brand">
+          <div class="brand-row">
+            <img src="/static/images/logo.png" alt="Logo" />
+            <span>WebVibe Studios</span>
+          </div>
+          <p>
+            Building meaningful digital experiences with precision, clarity and
+            long-term value.
+          </p>
+        </div>
+
+        <!-- LINKS -->
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('services') }}">Services</a></li>
+            <li><a href="{{ url_for('ow') }}">Projects</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contact') }}">Connect</a></li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="contact">
+            <a href="tel:+917861055101", target="_blank"><li>+91 78610 55101</li></a>
+            <a href="mailto:webvibestudios15@gmail.com", target="_blank"><li>webvibestudios15@gmail.com</li></a>
+            <li>India</li>
+          </ul>
+        </div>
+
+        <!-- SOCIAL -->
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <div class="socials">
+            <a href="https://www.instagram.com/webvibe_studios_?igsh=MWZldXI1aHF5dG1xbw%3D%3D&utm_source=qr", target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/webvibe-studios-0aa9163a1/", target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=7861055101&text&type=phone_number&app_absent=0", target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© 2025 WebVibe Studios. All rights reserved.</div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-top">↑</button>
+    <!-- JavaScript -->
+    <script src="/static/js/nav.js"></script>
+    <script src="/static/js/ow.js"></script>
+    
+</body>
+</html>

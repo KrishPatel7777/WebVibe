@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Studios - Premier Web App & AI Studio. Custom web applications, AI-powered solutions, and cutting-edge digital experiences.">
+    <meta name="keywords" content="Web App Studio, AI Web Development, Custom Web Applications, AI Solutions, Digital Studio">
+    <title>WebVibe Studios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+    rel="icon"
+    type="image/png"
+    href="{{ url_for('static', filename='images/logo.png') }}"
+    >
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/index.css"/>
+</head>
+<body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow"></div>
+    
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <div class="top-left">
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+917861055101">+91 78610 55101</a>
+      </div>
+      <div class="top-right">
+        <a href="https://www.instagram.com/webvibe_studios_?igsh=MWZldXI1aHF5dG1xbw%3D%3D&utm_source=qr", target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/webvibe-studios-0aa9163a1/", target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=7861055101&text&type=phone_number&app_absent=0", target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+
+    <!-- NAVBAR -->
+    <header class="navbar" role="navigation">
+      <!-- LEFT GROUP -->
+      <div class="nav-left">
+        <!-- HAMBURGER -->
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- LOGO + NAME -->
+        <div class="branding">
+          <img src="/static/images/logo.png" alt="Company Logo" />
+          <span class="brand-name">WebVibe Studios</span>
+        </div>
+      </div>
+
+      <!-- CENTER MENU -->
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="{{ url_for('index') }}" tabindex="0">Home</a>
+        <a href="{{ url_for('services') }}" tabindex="0">Services</a>
+        <a href="{{ url_for('ow') }}" tabindex="0">Project</a>
+        <a href="{{ url_for('about') }}" tabindex="0">About Us</a>
+        <a href="{{ url_for('contact') }}" tabindex="0">Connect</a>
+      </nav>
+    </header>
+    <!-- Hero Section with 3D Spiral -->
+    <section class="hero" id="hero">
+        <div class="spiral-container">
+            <div class="spiral-core"></div>
+            <div class="spiral-ring spiral-ring-1"></div>
+            <div class="spiral-ring spiral-ring-2"></div>
+            <div class="spiral-ring spiral-ring-3"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="gradient-text">Crafting Digital</span>
+                <span class="gradient-text">Experiences</span>
+            </h1>
+            <p class="hero-subtitle">Where Web Development Meets Artificial Intelligence</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="47">0</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="43">0</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="21">0</span>
+                    <span class="stat-label">Companies Served</span>
+                </div>
+            </div>
+            <div class="cta-buttons">
+                <a href="/templates/contact.html" aria-label="Start Your Project">
+                <button class="cta-primary">
+                    <span>Start Your Project</span>
+                    <div class="button-glow"></div>
+                </button>
+                </a>
+                <a href="/templates/ow.html" aria-label="Explore Our Work">
+                <button class="cta-secondary">
+                    <span>Explore Our Work</span>
+                </button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Technologies Train Section -->
+    <section class="technologies" id="technologies">
+        <h2 class="section-title">Technologies We Are Expert In</h2>
+        <div class="train-track">
+            <div class="train-container">
+                <div class="train-coach" data-tech="HTML5">
+                    <div class="coach-icon">HTML</div>
+                    <div class="coach-label">HTML5</div>
+                </div>
+                <div class="train-coach" data-tech="CSS3">
+                    <div class="coach-icon">CSS</div>
+                    <div class="coach-label">CSS3</div>
+                </div>
+                <div class="train-coach" data-tech="JavaScript">
+                    <div class="coach-icon">JS</div>
+                    <div class="coach-label">JavaScript</div>
+                </div>
+                <div class="train-coach" data-tech="React">
+                    <div class="coach-icon">⚛</div>
+                    <div class="coach-label">React</div>
+                </div>
+                <div class="train-coach" data-tech="Next.js">
+                    <div class="coach-icon">N</div>
+                    <div class="coach-label">Next.js</div>
+                </div>
+                <div class="train-coach" data-tech="Node.js">
+                    <div class="coach-icon">Node</div>
+                    <div class="coach-label">Node.js</div>
+                </div>
+                <div class="train-coach" data-tech="Express">
+                    <div class="coach-icon">EX</div>
+                    <div class="coach-label">Express</div>
+                </div>
+                <div class="train-coach" data-tech="PHP">
+                    <div class="coach-icon">PHP</div>
+                    <div class="coach-label">PHP</div>
+                </div>
+                <div class="train-coach" data-tech="Laravel">
+                    <div class="coach-icon">L</div>
+                    <div class="coach-label">Laravel</div>
+                </div>
+                <div class="train-coach" data-tech="Python">
+                    <div class="coach-icon">Py</div>
+                    <div class="coach-label">Python</div>
+                </div>
+                <div class="train-coach" data-tech="AI APIs">
+                    <div class="coach-icon">AI</div>
+                    <div class="coach-label">AI APIs</div>
+                </div>
+                <div class="train-coach" data-tech="WebGL">
+                    <div class="coach-icon">GL</div>
+                    <div class="coach-label">WebGL</div>
+                </div>
+                <div class="train-coach" data-tech="Three.js">
+                    <div class="coach-icon">3D</div>
+                    <div class="coach-label">Three.js</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Spiral Timeline -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="section-title">Our Creative Journey</h2>
+        <div class="spiral-timeline">
+            
+            
+            <div class="project-item" data-position="right">
+                <div class="project-content">
+                    <h3>E-Commerce Revolution</h3>
+                    <p>AI-powered product recommendations with real-time inventory management</p>
+                    <span class="project-tag">React • Node.js • AI</span>
+                </div>
+            </div>
+            
+            <div class="project-item" data-position="left">
+                <div class="project-content">
+                    <h3>Healthcare Portal</h3>
+                    <p>Secure patient management system with telemedicine integration</p>
+                    <span class="project-tag">Next.js • Laravel • WebRTC</span>
+                </div>
+            </div>
+            
+            <div class="project-item" data-position="right">
+                <div class="project-content">
+                    <h3>FinTech Dashboard</h3>
+                    <p>Real-time analytics and predictive financial insights platform</p>
+                    <span class="project-tag">Python • React • TensorFlow</span>
+                </div>
+            </div>
+            
+            <div class="project-item" data-position="left">
+                <div class="project-content">
+                    <h3>Smart Logistics</h3>
+                    <p>IoT-enabled supply chain optimization with AI route planning</p>
+                    <span class="project-tag">Node.js • Python • IoT</span>
+                </div>
+            </div>
+            
+            <div class="project-item" data-position="right">
+                <div class="project-content">
+                    <h3>Education Platform</h3>
+                    <p>Adaptive learning system with personalized curriculum generation</p>
+                    <span class="project-tag">Next.js • AI • WebGL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll-Triggered Storytelling -->
+    <section class="storytelling" id="storytelling">
+        <h2 class="section-title">Our Creative Process</h2>
+        <div class="story-container">
+            <div class="story-phase" data-phase="1">
+                <div class="phase-icon">💡</div>
+                <h3>Idea</h3>
+                <p>We transform your vision into a strategic digital blueprint through collaborative ideation sessions</p>
+            </div>
+            
+            <div class="story-phase" data-phase="2">
+                <div class="phase-icon">🎨</div>
+                <h3>Design</h3>
+                <p>Our designers craft immersive experiences that merge aesthetics with functionality</p>
+            </div>
+            
+            <div class="story-phase" data-phase="3">
+                <div class="phase-icon">⚙️</div>
+                <h3>Development</h3>
+                <p>Cutting-edge code meets AI innovation to build robust, scalable solutions</p>
+            </div>
+            
+            <div class="story-phase" data-phase="4">
+                <div class="phase-icon">🚀</div>
+                <h3>Launch</h3>
+                <p>We deploy with precision and provide continuous optimization for sustained success</p>
+            </div>
+        </div>
+        <div class="connecting-spiral">
+            <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
+                <path class="spiral-path" d="M 100 200 Q 250 100 400 200 Q 550 300 700 200" 
+                      stroke="rgba(213,206,163,0.4)" 
+                      fill="none" 
+                      stroke-width="3"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <!-- Why Choose Us -->
+<section class="ai-lab" id="why-choose-us">
+    <h2 class="section-title">Why Choose Us</h2>
+
+    <div class="lab-grid">
+
+        <div class="lab-panel">
+            <div class="panel-glow"></div>
+            <div class="panel-icon">
+                <i class="fas fa-handshake"></i>
+            </div>
+            <h3>Trust & Transparency</h3>
+            <p>We build long-term partnerships through honesty, clarity, and reliable delivery.</p>
+            <ul>
+                <li>Clear Communication</li>
+                <li>No Hidden Costs</li>
+                <li>On-Time Delivery</li>
+            </ul>
+        </div>
+
+
+        <div class="lab-panel">
+            <div class="panel-glow"></div>
+            <div class="panel-icon">
+                <i class="fas fa-bolt"></i>
+            </div>
+            <h3>High Performance</h3>
+            <p>Optimized code and modern technologies ensure lightning-fast performance.</p>
+            <ul>
+                <li>Speed & Performance Optimization</li>
+                <li>Clean & Maintainable Code</li>
+                <li>Best Development Practices</li>
+            </ul>
+        </div>
+
+        <div class="lab-panel">
+            <div class="panel-glow"></div>
+            <div class="panel-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Secure & Reliable</h3>
+            <p>Your data and systems are protected with industry-standard security practices.</p>
+            <ul>
+                <li>Secure Authentication</li>
+                <li>Data Protection</li>
+                <li>Reliable Infrastructure</li>
+            </ul>
+        </div>
+
+        <div class="lab-panel">
+            <div class="panel-glow"></div>
+            <div class="panel-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <h3>Client-Centric Approach</h3>
+            <p>We collaborate closely with clients to deliver tailored and impactful solutions.</p>
+            <ul>
+                <li>Transparent Communication</li>
+                <li>Custom-Built Solutions</li>
+                <li>Ongoing Support & Growth</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- Immersive Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonial-orbit">
+            <div class="testimonial-card">
+                <div class="testimonial-avatar">BP</div>
+                <p class="testimonial-text">"Studios transformed our business with an AI-powered platform that increased our efficiency by 300%"</p>
+                <div class="testimonial-author">
+                    <strong>Bhavy Panchal</strong>
+                    <span>Co-Founder, Parampara Wedding Planner</span>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-avatar">YP</div>
+                <p class="testimonial-text">"The team's expertise in both web development and AI is unmatched. They delivered beyond expectations"</p>
+                <div class="testimonial-author">
+                    <strong>Yogita Patel</strong>
+                    <span>CEO, Nutri Student</span>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-avatar">NS</div>
+                <p class="testimonial-text">"Outstanding quality, excellent communication, and a product that truly stands out in the market"</p>
+                <div class="testimonial-author">
+                    <strong>Naresh Shah</strong>
+                    <span>Architect</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Avatar Hologram -->
+    <section class="ai-avatar" id="ai-avatar">
+        <div class="avatar-container">
+            <div class="hologram-core">
+                <div class="core-circle core-1"></div>
+                <div class="core-circle core-2"></div>
+                <div class="core-circle core-3"></div>
+                <div class="core-line line-1"></div>
+                <div class="core-line line-2"></div>
+                <div class="core-line line-3"></div>
+                <div class="core-line line-4"></div>
+            </div>
+            <div class="avatar-text">
+                <h2>WebVibe Studios + Client Collaboration</h2>
+                <p>We believe the future belongs to those who combine human creativity with artificial intelligence</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Futuristic CTA -->
+    <section class="final-cta" id="final-cta">
+        <div class="cta-3d-container">
+            <div class="cta-panel panel-left">
+                <h3>Ready to Build</h3>
+            </div>
+            <div class="cta-panel panel-center">
+                <h2>The Future with WebVibe Studios?</h2>
+                <p>Let's create something extraordinary together</p>
+                <a href="{{ url_for('contact') }}" aria-label="Get Started Now">
+                <button class="cta-action">
+                    <span>Get Started Now</span>
+                    <div class="button-glow"></div>
+                </button>
+                </a>
+            </div>
+            <div class="cta-panel panel-right">
+                <div class="cta-benefits">
+                    <div class="benefit-item">✓ Free Consultation</div>
+                    <div class="benefit-item">✓ Custom Solutions</div>
+                    <div class="benefit-item">✓ Creative Approach</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="elegant-footer">
+      <div class="footer-inner">
+        <!-- BRAND -->
+        <div class="footer-col brand">
+          <div class="brand-row">
+            <img src="/static/images/logo.png" alt="Logo" />
+            <span>WebVibe Studios</span>
+          </div>
+          <p>
+            Building meaningful digital experiences with precision, clarity and
+            long-term value.
+          </p>
+        </div>
+
+        <!-- LINKS -->
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('services') }}">Services</a></li>
+            <li><a href="{{ url_for('ow') }}">Projects</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contact') }}">Connect</a></li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="contact">
+            <a href="tel:+917861055101", target="_blank"><li>+91 78610 55101</li></a>
+            <a href="mailto:webvibestudios15@gmail.com", target="_blank"><li>webvibestudios15@gmail.com</li></a>
+            <li>India</li>
+          </ul>
+        </div>
+
+        <!-- SOCIAL -->
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <div class="socials">
+            <a href="https://www.instagram.com/webvibe_studios_?igsh=MWZldXI1aHF5dG1xbw%3D%3D&utm_source=qr", target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/webvibe-studios-0aa9163a1/", target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=7861055101&text&type=phone_number&app_absent=0", target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© 2025 WebVibe Studios. All rights reserved.</div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-top">↑</button>
+
+    <script src="/static/js/nav.js"></script>
+    <script src="/static/js/index.js"></script>
+</body>
+</html>

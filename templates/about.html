@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WebVibeStudios - Premier digital studio specializing in full-stack development, UI/UX design, and innovative web solutions. Meet our expert team.">
+    <meta name="keywords" content="WebVibeStudios, digital studio, web development, full stack, UI/UX design, creative agency">
+    <meta name="author" content="WebVibeStudios">
+    <meta property="og:title" content="About WebVibeStudios - Premium Digital Studio">
+    <meta property="og:description" content="Discover our story, mission, and the talented team behind WebVibeStudios">
+    <meta property="og:type" content="website">
+    <title>About Us - WebVibe Studios</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+    rel="icon"
+    type="image/png"
+    href="{{ url_for('static', filename='images/logo.png') }}"
+    >
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <link rel="stylesheet" href="/static/css/nav.css"/>
+    <link rel="stylesheet" href="/static/css/about.css">
+</head>
+<body>
+    <div class="cursor-glow"></div>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <div class="top-left">
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+917861055101">+91 78610 55101</a>
+      </div>
+      <div class="top-right">
+        <a href="https://www.instagram.com/webvibe_studios_?igsh=MWZldXI1aHF5dG1xbw%3D%3D&utm_source=qr", target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/webvibe-studios-0aa9163a1/", target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=7861055101&text&type=phone_number&app_absent=0", target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar" role="navigation">
+      <!-- LEFT GROUP -->
+      <div class="nav-left">
+        <!-- HAMBURGER -->
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- LOGO + NAME -->
+        <div class="branding">
+          <img src="/static/images/logo.png" alt="Company Logo" />
+          <span class="brand-name">WebVibe Studios</span>
+        </div>
+      </div>
+
+      <!-- CENTER MENU -->
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="{{ url_for('index') }}" tabindex="0">Home</a>
+        <a href="{{ url_for('services') }}" tabindex="0">Services</a>
+        <a href="{{ url_for('ow') }}" tabindex="0">Project</a>
+        <a href="{{ url_for('about') }}" tabindex="0">About Us</a>
+        <a href="{{ url_for('contact') }}" tabindex="0">Connect</a>
+      </nav>
+    </header>
+    <!-- HERO SECTION -->
+    <section class="hero-section" aria-labelledby="hero-heading">
+        <div class="hero-container">
+            <div class="floating-orbs">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+            </div>
+            
+            <div class="hero-content">
+                <h1 id="hero-heading" class="hero-title">
+                    <span class="title-line">Crafting Digital</span>
+                    <span class="title-line">Experiences</span>
+                </h1>
+                <p class="hero-subtitle">Where Innovation Meets Elegance</p>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <span>Explore</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT STORY SECTION -->
+    <section class="about-story" aria-labelledby="story-heading">
+        <div class="section-container">
+            <div class="story-visual">
+                <div class="visual-cube">
+                    <div class="cube-face front"></div>
+                    <div class="cube-face back"></div>
+                    <div class="cube-face right"></div>
+                    <div class="cube-face left"></div>
+                    <div class="cube-face top"></div>
+                    <div class="cube-face bottom"></div>
+                </div>
+            </div>
+            
+            <div class="story-content">
+                <h2 id="story-heading" class="section-heading">Our Story</h2>
+                <div class="story-text">
+                    <p>WebVibeStudios emerged from a vision to redefine digital experiences. Founded by a collective of passionate developers and designers, we've transformed from a concept into a powerhouse of innovation.</p>
+                    <p>Our journey is built on the belief that every pixel, every interaction, and every line of code should tell a story. We don't just build websites—we craft digital ecosystems that resonate with purpose and precision.</p>
+                    <p>Today, we stand at the intersection of creativity and technology, pushing boundaries and setting new standards in the digital landscape.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION & VISION SECTION -->
+    <section class="mission-vision" aria-labelledby="mission-heading">
+        <div class="section-container">
+            <h2 id="mission-heading" class="section-heading centered">Mission & Vision</h2>
+            
+            <div class="mv-grid">
+                <article class="mv-card mission-card">
+                    <div class="mv-icon-wrapper">
+                        <div class="mv-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To empower businesses through transformative digital solutions that combine cutting-edge technology with human-centered design, creating experiences that drive growth and inspire connection.</p>
+                </article>
+                
+                <article class="mv-card vision-card">
+                    <div class="mv-icon-wrapper">
+                        <div class="mv-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To be the catalyst for digital transformation, pioneering innovative solutions that shape the future of web experiences and set new industry benchmarks for excellence and creativity.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US SECTION -->
+    <section class="why-choose" aria-labelledby="why-heading">
+        <div class="section-container">
+            <h2 id="why-heading" class="section-heading centered">Why Choose Us</h2>
+            
+            <div class="reasons-grid">
+                <article class="reason-item" data-reason="1">
+                    <div class="reason-number">01</div>
+                    <div class="reason-content">
+                        <h3>Full-Stack Mastery</h3>
+                        <p>End-to-end development expertise covering frontend elegance to backend robustness, delivering seamless digital solutions.</p>
+                    </div>
+                    <div class="reason-orbit"></div>
+                </article>
+                
+                <article class="reason-item" data-reason="2">
+                    <div class="reason-number">02</div>
+                    <div class="reason-content">
+                        <h3>Design-Driven Approach</h3>
+                        <p>Every project begins with user-centric design thinking, ensuring intuitive interfaces that captivate and convert.</p>
+                    </div>
+                    <div class="reason-orbit"></div>
+                </article>
+                
+                <article class="reason-item" data-reason="3">
+                    <div class="reason-number">03</div>
+                    <div class="reason-content">
+                        <h3>Innovative Solutions</h3>
+                        <p>Leveraging cutting-edge technologies and creative problem-solving to deliver solutions that exceed expectations.</p>
+                    </div>
+                    <div class="reason-orbit"></div>
+                </article>
+                
+                <article class="reason-item" data-reason="4">
+                    <div class="reason-number">04</div>
+                    <div class="reason-content">
+                        <h3>Client-Centric Philosophy</h3>
+                        <p>Your vision drives our execution. We provide dedicated consultation and transparent communication throughout.</p>
+                    </div>
+                    <div class="reason-orbit"></div>
+                </article>
+                
+                <article class="reason-item" data-reason="5">
+                    <div class="reason-number">05</div>
+                    <div class="reason-content">
+                        <h3>Performance Excellence</h3>
+                        <p>Optimized, scalable, and lightning-fast solutions that deliver exceptional user experiences across all devices.</p>
+                    </div>
+                    <div class="reason-orbit"></div>
+                </article>
+
+                <article class="reason-item" data-reason="6">
+                    <div class="reason-number">06</div>
+                    <div class="reason-content">
+                        <h3>Transparent Pricing</h3>
+                        <p>We offer high-quality development solutions at competitive prices with no hidden charges. Our transparent pricing ensures you get maximum value while staying within your budget.</p>
+                    </div>
+                    <div class="reason-orbit"></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="team-section" aria-labelledby="team-heading">
+        <div class="section-container">
+            <h2 id="team-heading" class="section-heading centered">Meet The Visionaries</h2>
+            <p class="team-intro">The creative minds powering WebVibeStudios</p>
+            
+            <div class="team-constellation">
+                <div class="constellation-center"></div>
+                
+                <article class="team-member" data-member="1">
+                    <div class="member-card">
+                        <div class="member-avatar">
+                            <div class="avatar-ring"></div>
+                            <div class="avatar-inner">NP</div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Niket Panchal</h3>
+                            <p class="member-role">Full Stack Developer</p>
+                            <div class="member-tags">
+                                <span>Content Design</span>
+                                <span>Client Consulting</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="team-member" data-member="2">
+                    <div class="member-card">
+                        <div class="member-avatar">
+                            <div class="avatar-ring"></div>
+                            <div class="avatar-inner">JP</div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Jainam Panchal</h3>
+                            <p class="member-role">Full Stack Developer</p>
+                            <div class="member-tags">
+                                <span>Backend Specialist</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="team-member" data-member="3">
+                    <div class="member-card">
+                        <div class="member-avatar">
+                            <div class="avatar-ring"></div>
+                            <div class="avatar-inner">KP</div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Krish Patel</h3>
+                            <p class="member-role">Full Stack Developer</p>
+                            <div class="member-tags">
+                                <span>UI/UX Specialist</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <footer class="elegant-footer">
+      <div class="footer-inner">
+        <!-- BRAND -->
+        <div class="footer-col brand">
+          <div class="brand-row">
+            <img src="/static/images/logo.png" alt="Logo" />
+            <span>WebVibe Studios</span>
+          </div>
+          <p>
+            Building meaningful digital experiences with precision, clarity and
+            long-term value.
+          </p>
+        </div>
+
+        <!-- LINKS -->
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('services') }}">Services</a></li>
+            <li><a href="{{ url_for('ow') }}">Projects</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contact') }}">Connect</a></li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="contact">
+            <a href="tel:+917861055101", target="_blank"><li>+91 78610 55101</li></a>
+            <a href="mailto:webvibestudios15@gmail.com", target="_blank"><li>webvibestudios15@gmail.com</li></a>
+            <li>India</li>
+          </ul>
+        </div>
+
+        <!-- SOCIAL -->
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <div class="socials">
+            <a href="https://www.instagram.com/webvibe_studios_?igsh=MWZldXI1aHF5dG1xbw%3D%3D&utm_source=qr", target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/webvibe-studios-0aa9163a1/", target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=7861055101&text&type=phone_number&app_absent=0", target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© 2025 WebVibe Studios. All rights reserved.</div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-top">↑</button>
+
+    <script src="/static/js/nav.js"></script>
+    <script src="/static/js/about.js"></script>
+</body>
+</html>

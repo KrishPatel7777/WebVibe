@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium Navbar</title>
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <link rel="stylesheet" href="nav.css"/>
+  </head>
+  <body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow"></div>
+    
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <div class="top-left">
+        <i class="fa-solid fa-phone"></i>
+        <span>+91 7861055101</span>
+      </div>
+      <div class="top-right">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar" role="navigation">
+      <!-- LEFT GROUP -->
+      <div class="nav-left">
+        <!-- HAMBURGER -->
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- LOGO + NAME -->
+        <div class="branding">
+          <img src="logo.png" alt="Company Logo" />
+          <span class="brand-name">WebVibe Studios</span>
+        </div>
+      </div>
+
+      <!-- CENTER MENU -->
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="{{ url_for('home') }}" tabindex="0">Home</a>
+        <a href="{{ url_for('services') }}" tabindex="0">Services</a>
+        <a href="{{ url_for('project') }}" tabindex="0">Project</a>
+        <a href="{{ url_for('about') }}" tabindex="0">About Us</a>
+        <a href="{{ url_for('connect') }}" tabindex="0">Connect</a>
+      </nav>
+    </header>
+    <!-- FOOTER -->
+    <footer class="elegant-footer">
+      <div class="footer-inner">
+        <!-- BRAND -->
+        <div class="footer-col brand">
+          <div class="brand-row">
+            <img src="logo.png" alt="Logo" />
+            <span>WebVibe Studios</span>
+          </div>
+          <p>
+            Building meaningful digital experiences with precision, clarity and
+            long-term value.
+          </p>
+        </div>
+
+        <!-- LINKS -->
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('services') }}">Services</a></li>
+            <li><a href="{{ url_for('project') }}">Projects</a></li>
+            <li><a href="about">About</a></li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="contact">
+            <li>+91 7861055101</li>
+            <li>webvibestudios15@company.com</li>
+            <li>India</li>
+          </ul>
+        </div>
+
+        <!-- SOCIAL -->
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <div class="socials">
+            <a href="#">Fb</a>
+            <a href="#">Ig</a>
+            <a href="#">Tw</a>
+            <a href="#">Ln</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© 2025 Your Company. All rights reserved.</div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-top">↑</button>
+    <script src="nav.js"></script>
+  </body>
+</html>

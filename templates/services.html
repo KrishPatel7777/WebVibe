@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional website development, portfolio creation, redesign, and maintenance services. Get your free domain with selected packages.">
+    <meta name="keywords" content="website development, portfolio website, website redesign, web maintenance, responsive design, SEO, hosting, domain registration">
+    <title>Our Services - WebVibe Studios</title>
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+    rel="icon"
+    type="image/png"
+    href="{{ url_for('static', filename='images/logo.png') }}"
+    >    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/static/css/services.css">
+    <link rel="stylesheet" href="/static/css/nav.css">
+</head>
+<body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow"></div>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <div class="top-left">
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+917861055101">+91 78610 55101</a>
+      </div>
+      <div class="top-right">
+        <a href="https://www.instagram.com/webvibe_studios_?igsh=MWZldXI1aHF5dG1xbw%3D%3D&utm_source=qr", target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/webvibe-studios-0aa9163a1/", target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=7861055101&text&type=phone_number&app_absent=0", target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar" role="navigation">
+        <div class="nav-left">
+            <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="branding">
+                <img src="/static/images/logo.png" alt="WebVibe Studios Logo">
+                <span class="brand-name">WebVibe Studios</span>
+            </div>
+        </div>
+
+        <nav class="nav-menu" aria-label="Main navigation">
+        <a href="{{ url_for('index') }}" tabindex="0">Home</a>
+        <a href="{{ url_for('services') }}" tabindex="0">Services</a>
+        <a href="{{ url_for('ow') }}" tabindex="0">Project</a>
+        <a href="{{ url_for('about') }}" tabindex="0">About Us</a>
+        <a href="{{ url_for('contact') }}" tabindex="0">Connect</a>
+      </nav>
+    </header>
+
+    <!-- ================= SERVICES SECTION ================= -->
+    <main class="services-wrapper" id="services">
+        <!-- Hero Section -->
+        <section class="services-hero" aria-label="Services Introduction">
+            <h1>Our Premium Services</h1>
+            <p class="subtitle">
+                Transform your digital presence with our comprehensive website development and digital services. 
+                From stunning portfolios to enterprise solutions, we deliver excellence.
+            </p>
+            <div class="scroll-indicator">
+                <span>Explore Services</span>
+                <i class="fas fa-arrow-down"></i>
+            </div>
+        </section>
+
+        <!-- Service 1: Website Development -->
+        <section class="service-split" aria-labelledby="service1-heading">
+            <div class="service-content">
+                <span class="service-number" aria-hidden="true">01</span>
+                <h2 id="service1-heading">Website Development</h2>
+                <p>
+                    We develop modern, responsive, and user-friendly websites tailored to your business needs. 
+                    Our approach combines cutting-edge technology with elegant design to create digital experiences 
+                    that engage and convert.
+                </p>
+                
+                <div class="service-features">
+                    <h3>What's Included:</h3>
+                    <ul>
+                        <li>Fully responsive design across all devices</li>
+                        <li>Interactive contact form with validation</li>
+                        <li>Basic SEO optimization and meta tags</li>
+                        <li>Hosting guidance and deployment support</li>
+                        <li>Performance optimization for fast loading</li>
+                        <li>Cross-browser compatibility</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-box">
+                    <h3>Investment Options:</h3>
+                    <div class="price-item">
+                        <span>Static Website</span>
+                        <span>₹3,000 – ₹5,000</span>
+                    </div>
+                    <div class="price-item">
+                        <span>Dynamic Website</span>
+                        <span>₹8,000 – ₹15,000</span>
+                    </div>
+                    <div class="price-item">
+                        <span>Custom Solution</span>
+                        <span>As Per Requirement</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-visual">
+                <i class="fas fa-laptop-code visual-icon" aria-hidden="true"></i>
+            </div>
+        </section>
+
+        <!-- Service 2: Portfolio Website -->
+        <section class="service-split reverse" aria-labelledby="service2-heading">
+            <div class="service-content">
+                <span class="service-number" aria-hidden="true">02</span>
+                <h2 id="service2-heading">Portfolio Websites</h2>
+                <p>
+                    Showcase your work, skills, and achievements with a stunning portfolio website. 
+                    Perfect for students, professionals, and creatives looking to make a lasting impression.
+                </p>
+                
+                <div class="service-features">
+                    <h3>Portfolio Types:</h3>
+                    <ul>
+                        <li>Student Portfolio - Academic projects and achievements</li>
+                        <li>Professional Portfolio - Career highlights and expertise</li>
+                        <li>Resume Website - Interactive digital CV</li>
+                        <li>Creative Showcase - Visual work and case studies</li>
+                        <li>Personal Branding - Establish your online presence</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-box">
+                    <h3>Investment Options:</h3>
+                    <div class="price-item">
+                        <span>Single Page Portfolio</span>
+                        <span>₹2,000</span>
+                    </div>
+                    <div class="price-item">
+                        <span>Multi Page Portfolio</span>
+                        <span>₹3,500</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-visual">
+                <i class="fas fa-briefcase visual-icon" aria-hidden="true"></i>
+            </div>
+        </section>
+
+        <!-- Service 3: Maintenance & Support -->
+        <section class="service-split" aria-labelledby="service3-heading">
+            <div class="service-content">
+                <span class="service-number" aria-hidden="true">03</span>
+                <h2 id="service3-heading">Maintenance & Support</h2>
+                <p>
+                    We provide continuous support to keep your website secure, updated, and performing at its best. 
+                    Focus on your business while we handle the technical details.
+                </p>
+                
+                <div class="service-features">
+                    <h3>What's Included:</h3>
+                    <ul>
+                        <li>Bug fixing and troubleshooting</li>
+                        <li>Regular content updates</li>
+                        <li>Security monitoring and patches</li>
+                        <li>Performance optimization</li>
+                        <li>Backup and recovery services</li>
+                        <li>24/7 technical support</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-box">
+                    <h3>Investment Options:</h3>
+                    <div class="price-item">
+                        <span>Monthly Maintenance Plan</span>
+                        <span>As Required</span>
+                    </div>
+                    <div class="price-item">
+                        <span>On-Demand Support</span>
+                        <span>Custom Pricing</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-visual">
+                <i class="fas fa-tools visual-icon" aria-hidden="true"></i>
+            </div>
+        </section>
+
+        <!-- FREE DOMAIN OFFER SECTION -->
+        <section class="free-domain-section" aria-labelledby="domain-heading">
+            <div class="free-domain-content">
+                <span class="badge">EXCLUSIVE OFFER</span>
+                <h2 id="domain-heading">Free Domain Registration</h2>
+                <p>
+                    Launch your online presence without the hassle! We provide free domain registration 
+                    for the first year with selected website packages.
+                </p>
+
+                <div class="domain-features">
+                    <div class="domain-feature">
+                        <i class="fas fa-globe" aria-hidden="true"></i>
+                        <h4>Domain Registration</h4>
+                        <p>Free .com, .in, or .org domain for one year</p>
+                    </div>
+                    <div class="domain-feature">
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                        <h4>Expert Guidance</h4>
+                        <p>Assistance in selecting the perfect domain name</p>
+                    </div>
+                    <div class="domain-feature">
+                        <i class="fas fa-cogs" aria-hidden="true"></i>
+                        <h4>Complete Setup</h4>
+                        <p>Domain configuration and DNS management</p>
+                    </div>
+                    <div class="domain-feature">
+                        <i class="fas fa-rocket" aria-hidden="true"></i>
+                        <h4>Fast Launch</h4>
+                        <p>Reduce initial costs and go live quickly</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FREE SERVICES SECTION -->
+        <section class="free-services-section" aria-labelledby="free-services-heading">
+            <div class="section-header">
+                <h2 id="free-services-heading">Free Services From Us</h2>
+                <p>Every project includes these premium services at no extra cost</p>
+            </div>
+
+            <div class="services-grid">
+                <article class="service-item">
+                    <i class="fas fa-server" aria-hidden="true"></i>
+                    <h3>Hosting Account Setup</h3>
+                    <p>Complete hosting configuration and server environment setup for your website</p>
+                </article>
+
+                <article class="service-item">
+                    <i class="fas fa-cogs" aria-hidden="true"></i>
+                    <h3>Server Configuration</h3>
+                    <p>Optimized server settings configured for maximum performance and reliability</p>
+                </article>
+
+                <article class="service-item">
+                    <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
+                    <h3>Website Deployment</h3>
+                    <p>Seamless deployment to production environment with zero downtime</p>
+                </article>
+
+                <article class="service-item">
+                    <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                    <h3>Monthly Meeting From Our Side</h3>
+                    <p>Regular check-ins to discuss progress, updates, and future improvements</p>
+                </article>
+
+                <article class="service-item">
+                    <i class="fas fa-lock" aria-hidden="true"></i>
+                    <h3>SSL Certificate</h3>
+                    <p>Free SSL certificate installation for secure HTTPS connection and trust</p>
+                </article>
+
+                <article class="service-item">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <h3>Basic SEO Setup</h3>
+                    <p>Essential SEO optimization including meta tags for better search visibility</p>
+                </article>
+
+                <article class="service-item">
+                    <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                    <h3>Mobile Responsive Design</h3>
+                    <p>Perfect display and functionality on all devices and screen sizes</p>
+                </article>
+
+                <article class="service-item">
+                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                    <h3>Website Training</h3>
+                    <p>Comprehensive training session on managing and updating your website</p>
+                </article>
+
+                <article class="service-item">
+                    <i class="fas fa-user-tie" aria-hidden="true"></i>
+                    <h3>Consulting from our Expert</h3>
+                    <p>Personalized expert consulting to manage and scale your website with ease</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- LIMITED TIME OFFER -->
+        <section class="limited-offer-section" aria-labelledby="limited-offer-heading">
+            <div class="limited-offer-content">
+                <span class="limited-badge">LIMITED TIME ONLY</span>
+                <span class="emoji" aria-hidden="true">🎉</span>
+                <h2 id="limited-offer-heading">Festival Post Designing</h2>
+                
+                <div class="offer-details">
+                    <h3>What You Get:</h3>
+                    <ul>
+                        <li>Professionally designed festival posts for all major occasions</li>
+                        <li>Custom designs featuring your brand logo and contact details</li>
+                        <li>Ready-to-share high-quality graphics for WhatsApp and social media</li>
+                        <li>Multiple design variations to choose from</li>
+                        <li>Quick turnaround time for timely posting</li>
+                    </ul>
+                </div>
+
+                <p style="font-size: 16px; color: var(--brown); margin-bottom: 30px;">
+                    This exclusive service helps you maintain an active social media presence 
+                    without the hassle of designing posts. Perfect for businesses looking to 
+                    engage with customers during festivals and special occasions.
+                </p>
+
+                <a href="{{ url_for('contact') }}" class="cta-button">Claim Your Free Service</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="elegant-footer">
+        <div class="footer-inner">
+            <!-- BRAND -->
+            <div class="footer-col brand">
+                <div class="brand-row">
+                    <img src="/static/images/logo.png" alt="WebVibe Studios Logo">
+                    <span>WebVibe Studios</span>
+                </div>
+                <p>
+                    Building meaningful digital experiences with precision, clarity and
+                    long-term value.
+                </p>
+            </div>
+
+            <!-- LINKS -->
+            <div class="footer-col">
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('services') }}">Services</a></li>
+                    <li><a href="{{ url_for('ow') }}">Projects</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('contact') }}">Connect</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="contact">
+            <a href="tel:+917861055101", target="_blank"><li>+91 78610 55101</li></a>
+            <a href="mailto:webvibestudios15@gmail.com", target="_blank"><li>webvibestudios15@gmail.com</li></a>
+            <li>India</li>
+          </ul>
+        </div>
+
+        <!-- SOCIAL -->
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <div class="socials">
+            <a href="https://www.instagram.com/webvibe_studios_?igsh=MWZldXI1aHF5dG1xbw%3D%3D&utm_source=qr", target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/webvibe-studios-0aa9163a1/", target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=7861055101&text&type=phone_number&app_absent=0", target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© 2025 WebVibe Studios. All rights reserved.</div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-top" aria-label="Back to top">↑</button>
+
+    <!-- External JavaScript -->
+    <script src="/static/js/services.js"></script>
+</body>
+</html>

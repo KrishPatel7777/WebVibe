@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect - WebVibe Studios</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+    rel="icon"
+    type="image/png"
+    href="{{ url_for('static', filename='images/logo.png') }}"
+    >
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/contact.css">
+    <link rel="stylesheet" href="/static/css/nav.css">
+</head>
+<body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow"></div>
+    
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <div class="top-left">
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+917861055101">+91 78610 55101</a>
+      </div>
+      <div class="top-right">
+        <a href="https://www.instagram.com/webvibe_studios_?igsh=MWZldXI1aHF5dG1xbw%3D%3D&utm_source=qr", target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/webvibe-studios-0aa9163a1/", target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=7861055101&text&type=phone_number&app_absent=0", target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+
+    <!-- NAVBAR -->
+    <header class="navbar" role="navigation">
+      <!-- LEFT GROUP -->
+      <div class="nav-left">
+        <!-- HAMBURGER -->
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- LOGO + NAME -->
+        <div class="branding">
+          <img src="/static/images/logo.png" alt="Company Logo" />
+          <span class="brand-name">WebVibe Studios</span>
+        </div>
+      </div>
+
+      <!-- CENTER MENU -->
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="{{ url_for('index') }}" tabindex="0">Home</a>
+        <a href="{{ url_for('services') }}" tabindex="0">Services</a>
+        <a href="{{ url_for('ow') }}" tabindex="0">Project</a>
+        <a href="{{ url_for('about') }}" tabindex="0">About Us</a>
+        <a href="{{ url_for('contact') }}" tabindex="0">Connect</a>
+      </nav>
+    </header>
+    <!-- Main Contact Section -->
+    <section class="contact-section" id="contactSection">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <h1 class="section-title">Get a Free Quote</h1>
+                <p class="section-subtitle">Tell us about your project and we'll get back to you within 24 hours</p>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form" id="contactForm" novalidate>
+                <!-- Row 1: Full Name & Email -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name <span class="required">*</span></label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+                        <span class="error-message" id="fullNameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                </div>
+
+                <!-- Row 2: Mobile & Company -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number <span class="required">*</span></label>
+                        <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number" maxlength="10">
+                        <span class="error-message" id="mobileError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company / Business Name <span class="required">*</span></label>
+                        <input type="text" id="company" name="company" placeholder="Enter your company name">
+                        <span class="error-message" id="companyError"></span>
+                    </div>
+                </div>
+
+                <!-- Row 3: City & State -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City <span class="required">*</span></label>
+                        <input type="text" id="city" name="city" placeholder="Enter your city">
+                        <span class="error-message" id="cityError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <select id="state" name="state">
+                            <option value="">Select State (Optional)</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                            <option value="Ladakh">Ladakh</option>
+                            <option value="Lakshadweep">Lakshadweep</option>
+                            <option value="Puducherry">Puducherry</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Row 4: Service & Budget -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="service">Service Interested In <span class="required">*</span></label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="Website Development">Website Development</option>
+                            <option value="Portfolio Website">Portfolio Website</option>
+                            <option value="Website Redesign">Website Redesign</option>
+                            <option value="Maintenance & Support">Maintenance & Support</option>
+                        </select>
+                        <span class="error-message" id="serviceError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Budget Range <span class="required">*</span></label>
+                        <select id="budget" name="budget">
+                            <option value="">Select your budget</option>
+                            <option value="Under ₹10,000">Under ₹10,000</option>
+                            <option value="₹10,000 – ₹25,000">₹10,000 – ₹25,000</option>
+                            <option value="₹25,000 – ₹50,000">₹25,000 – ₹50,000</option>
+                            <option value="₹50,000+">₹50,000+</option>
+                        </select>
+                        <span class="error-message" id="budgetError"></span>
+                    </div>
+                </div>
+
+                <!-- Row 5: Timeline (Full Width) -->
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="timeline">Project Timeline <span class="required">*</span></label>
+                        <select id="timeline" name="timeline">
+                            <option value="">Select timeline</option>
+                            <option value="Immediate">Immediate</option>
+                            <option value="1–2 Weeks">1–2 Weeks</option>
+                            <option value="1 Month">1 Month</option>
+                            <option value="Flexible">Flexible</option>
+                        </select>
+                        <span class="error-message" id="timelineError"></span>
+                    </div>
+                </div>
+
+                <!-- Row 6: Description (Full Width) -->
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="description">Project Description</label>
+                        <textarea id="description" name="description" rows="5" placeholder="Tell us more about your project requirements (optional)"></textarea>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-row">
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Request Quote</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Success Message (Hidden by default) -->
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">✓</div>
+                <h3>Thank You!</h3>
+                <p>Your quote request has been submitted successfully. We'll get back to you within 24 hours.</p>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="elegant-footer">
+      <div class="footer-inner">
+        <!-- BRAND -->
+        <div class="footer-col brand">
+          <div class="brand-row">
+            <img src="/static/images/logo.png" alt="Logo" />
+            <span>WebVibe Studios</span>
+          </div>
+          <p>
+            Building meaningful digital experiences with precision, clarity and
+            long-term value.
+          </p>
+        </div>
+
+        <!-- LINKS -->
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('services') }}">Services</a></li>
+            <li><a href="{{ url_for('ow') }}">Projects</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contact') }}">Connect</a></li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="contact">
+            <a href="tel:+917861055101", target="_blank"><li>+91 78610 55101</li></a>
+            <a href="mailto:webvibestudios15@gmail.com", target="_blank"><li>webvibestudios15@gmail.com</li></a>
+            <li>India</li>
+          </ul>
+        </div>
+
+        <!-- SOCIAL -->
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <div class="socials">
+            <a href="https://www.instagram.com/webvibe_studios_?igsh=MWZldXI1aHF5dG1xbw%3D%3D&utm_source=qr", target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/webvibe-studios-0aa9163a1/", target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=7861055101&text&type=phone_number&app_absent=0", target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© 2025 WebVibe Studios. All rights reserved.</div>
+    </footer>
+
+
+
+    <!-- BACK TO TOP -->
+    <button class="back-top">↑</button>
+
+    <script src="/static/js/nav.js"></script>
+    <script src="/static/js/contact.js"></script>
+</body>
+</html>
