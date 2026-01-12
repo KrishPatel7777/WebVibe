@@ -855,12 +855,12 @@ html {
   }
   
   .train-container {
-    animation: trainMoveHorizontal 25s linear infinite;
+    animation: trainMoveHorizontal 30s linear infinite;
   }
   
   @keyframes trainMoveHorizontal {
-    from { transform: translateX(100%); }
-    to { transform: translateX(-100%); }
+    from { transform: translateX(0%); }
+    to { transform: translateX(-50%); }
   }
   
   .project-item[data-position="right"],
