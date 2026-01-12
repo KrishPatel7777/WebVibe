@@ -351,7 +351,7 @@ html {
 
 @keyframes trainMove {
   from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  to { transform: translateX(-100%); }
 }
 
 /* Portfolio Spiral Timeline */
@@ -860,7 +860,7 @@ html {
   
   @keyframes trainMoveHorizontal {
     from { transform: translateX(0%); }
-    to { transform: translateX(-50%); }
+    to { transform: translateX(-100%); }
   }
   
   .project-item[data-position="right"],
